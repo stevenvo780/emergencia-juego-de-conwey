@@ -1,7 +1,5 @@
-
 import pygame
 import cupy as cp
-from game_of_life import GameOfLife
 
 pygame.init()
 
@@ -29,14 +27,14 @@ class App:
                     if event.key in self.keys_pressed:
                         self.keys_pressed[event.key] = False
                 elif event.type == pygame.MOUSEBUTTONDOWN:
-                    if event.button == 1:  # Left button
+                    if event.button == 1:
                         self.dragging = True
-                    elif event.button == 4:  # Wheel up
+                    elif event.button == 4:
                         self.cellSize += 1
-                    elif event.button == 5:  # Wheel down
+                    elif event.button == 5:
                         self.cellSize -= 1
                 elif event.type == pygame.MOUSEBUTTONUP:
-                    if event.button == 1:  # Left button
+                    if event.button == 1:
                         self.dragging = False
                 elif event.type == pygame.MOUSEMOTION and self.dragging:
                     dx, dy = event.rel
@@ -49,11 +47,7 @@ class App:
             for i in range(self.game_of_life.rows):
                 for j in range(self.game_of_life.cols):
                     if grid_np[i, j] == 1:
-                        pygame.draw.rect(self.screen, (255, 255, 255), (j*self.cellSize + self.view_offset[0], i*self.cellSize + self.view_offset[1], self.cellSize, self.cellSize))
+                        pygame.draw.rect(self.screen, (255, 255, 255),
+                                         (j*self.cellSize + self.view_offset[0], i*self.cellSize + self.view_offset[1], self.cellSize, self.cellSize))
             pygame.display.update()
             pygame.time.delay(100)
-
-if __name__ == "__main__":
-    game_of_life = GameOfLife(1000, 1000)
-    app = App(game_of_life)
-    app.run()
