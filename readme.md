@@ -28,6 +28,14 @@ Aquí, la propiedad reduccionista es simplemente el recuento de células vivas e
 
 El objetivo es mostrar que, aunque las propiedades reduccionistas como el recuento de células vivas pueden ser útiles, a menudo pierden la "imagen completa". Las propiedades emergentes como la entropía proporcionan una mejor comprensión del comportamiento del sistema. Al trazar estas propiedades en tiempo real a medida que evoluciona el juego, buscamos demostrar que los fenómenos emergentes son irreducibles a simplemente la suma de las partes individuales.
 
+## Análisis de No Reductibilidad
+
+El gráfico "Emergent vs Reductionist" muestra la relación entre la entropía (propiedad emergente) y el número de células vivas (propiedad reduccionista) a lo largo del tiempo. La no reductibilidad se evidencia si observamos que no hay una relación directa o fórmula simple que permita deducir la entropía solo a partir del número de células vivas.
+
+Aunque podríamos encontrar momentos donde ambas métricas muestran tendencias similares, la entropía encapsula aspectos más complejos del sistema que el mero conteo de células vivas no puede capturar. Por ejemplo, dos configuraciones con el mismo número de células vivas pueden tener entropías muy diferentes dependiendo de cómo estén distribuidas esas células.
+
+En resumen, la entropía provee información que no se puede obtener simplemente contando células vivas, validando así la no reductibilidad de esta propiedad emergente.
+
 ## Cómo Ejecutar
 
 Ejecute el archivo `main_script.py`. Esto iniciará tanto el juego como los gráficos en tiempo real. Asegúrese de tener todas las bibliotecas requeridas instaladas.
