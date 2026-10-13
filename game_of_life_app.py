@@ -32,7 +32,7 @@ class App:
                     elif event.button == 4:
                         self.cellSize += 1
                     elif event.button == 5:
-                        self.cellSize -= 1
+                        self.cellSize = max(1, self.cellSize - 1)
                 elif event.type == pygame.MOUSEBUTTONUP:
                     if event.button == 1:
                         self.dragging = False
